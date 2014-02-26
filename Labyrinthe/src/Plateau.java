@@ -14,11 +14,12 @@ public class Plateau {
 	{
 		int k = 0;
 		this.dimension=dimension;
-		this.tab = new Case[this.dimension][this.dimension];
-		/* Initialiser d�part et arriv�e*/
-		tab[0][0] = new CaseMur();
+		this.tab = new Case[dimension][dimension];
+		/* Initialiser départ et arrivée */
+        // XXX Faites des méthodes !
 		tab[I_DEPART][J_DEPART] = new CaseJoueur();
-		for(int k = 0, k < 5, k++){
+		// XXX Deux déclarations de k.
+        for(int k = 0, k < 5, k++){
 				tab[0][k] = new CaseMur();
 				tab[4][k] = new CaseMur();
 				
