@@ -1,4 +1,5 @@
-
+/* TODO Javadoc. */
+/* TODO Package. */
 public class Jeu {
 	private static final int DEFAULT_SIZE = 5;
 	
