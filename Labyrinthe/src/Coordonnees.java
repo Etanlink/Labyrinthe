@@ -1,9 +1,11 @@
-
+/* TODO Javadoc. */
+/* TODO Package. */
 public class Coordonnees {
-	public Coordonnees(int iDepart, int jDepart) {
-		// TODO
-	}
-	public int i;
-	public int j;
+    public int i;
+    public int j;
+
+    public Coordonnees(int iDepart, int jDepart) {
+        // TODO
+    }
 
 }
