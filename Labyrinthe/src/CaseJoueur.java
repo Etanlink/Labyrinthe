@@ -1,7 +1,8 @@
-
+/* TODO Javadoc. */
+/* TODO Package. */
 public class CaseJoueur implements Case {
-
-	public String afficher(){
-		return ".";
-	}
+    @Override
+    public String afficher() {
+        return ".";
+    }
 }
