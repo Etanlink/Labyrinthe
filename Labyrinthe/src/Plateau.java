@@ -28,7 +28,7 @@ public class Plateau {
 		depart = new Coordonnees(I_DEPART, J_DEPART);
 		arrivee = new Coordonnees(I_ARRIVEE, J_ARRIVEE);
 	}
-		public void affichePlateau() {
+		public void afficher() {
 	
 			System.out.println("==============");
 			for(int i = 0; i < this.dimension; i++){

@@ -9,8 +9,16 @@ public class Jeu {
 	public Jeu(){
 		plateau = new Plateau(DEFAULT_SIZE);
 		joueur = plateau.depart();
+		Coordonnees.getCoordonnéesJoueur();
 	}	
 	
 	public void jouer(){
+		/* Afficher le plateau. */
+		/* Demander le mouvement. */
+		/* Classe Scanner. */ 
+		/* Appliquer le mouvement. */
+		/* Transformer la saisie en deltas */
+		/* Tenter le coup. */
+		/* Retour étape 1. */
 	}
 }
