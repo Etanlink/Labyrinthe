@@ -11,4 +11,9 @@ public class CaseJoueur implements Case {
     public String afficher() {
         return ".";
     }
+    
+    @Override
+    public String toString() {
+    	return afficher();
+    }
 }

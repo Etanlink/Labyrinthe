@@ -11,4 +11,9 @@ public class CaseMur implements Case {
 	public String afficher() {
 		return "#";
 	}
+	
+    @Override
+    public String toString() {
+    	return afficher();
+    }
 }

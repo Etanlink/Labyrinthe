@@ -8,31 +8,12 @@
  */
 public class Coordonnees {
     /** TODO .*/
-    public int i;
+    private final int i;
     /** TODO . */
-    public int j;
-    /* TODO Qu'est-ce ? */
-    /** TODO . */
-    public int xJoueur;
-    /* TODO Qu'est-ce ? */
-    /** TODO . */
-    public int yJoueur;
+    private final int j;
 
     public Coordonnees(int iDepart, int jDepart) {
-        // TODO
+    	i = iDepart;
+    	j = jDepart;
     }
-
-    /* TODO Que vient faire cette méthode ici ? */
-    /** TODO. */
-    public int getCoordonneesJoueur() {
-        while (tab[i][j] != CaseJoueur) {
-            for (int i = 0; i < Plateau.dimension; i++) {
-                for(int j = 0; j < Plateau.dimension; j++){
-				}
-			}
-    	}
-    	this.xJoueur = j;
-    	this.yJoueur = i;
-    }
-
 }

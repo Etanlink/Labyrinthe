@@ -11,4 +11,9 @@ public class CaseSol implements Case {
 	public String afficher() {
 		return " ";
 	}
+	
+    @Override
+    public String toString() {
+    	return afficher();
+    }
 }
