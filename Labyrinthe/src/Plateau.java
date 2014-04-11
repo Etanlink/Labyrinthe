@@ -3,7 +3,7 @@
 /**
  * TODO.
  *
- * @author TODO
+ * @author /*BERTRAND Hugo et OLIVIER Etienne - TP2C *
  * @version TODO
  */
 public class Plateau {
@@ -19,7 +19,7 @@ public class Plateau {
     /** TODO. */
     private final Case[][]    tab;
     /** TODO. */
-    private final int         dimension;
+    private final int dimension;
     /** TODO. */
     private final Coordonnees depart;
     /** TODO. */
@@ -46,7 +46,7 @@ public class Plateau {
     }
 
     public void afficher() {
-        /* TODO À adapter à la taille du labytinth. */
+        /* TODO À adapter à la taille du labytinthe. */
         System.out.println("==============");
         for (int i = 0; i < this.dimension; i++) {
             for (int j = 0; j < this.dimension; j++) {
@@ -54,7 +54,7 @@ public class Plateau {
             }
             System.out.print("\n");
         }
-        /* TODO À adapter à la taille du labytinth. */
+        /* TODO À adapter à la taille du labytinthe. */
         System.out.println("==============");
     }
 }
