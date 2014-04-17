@@ -1,7 +1,7 @@
 
 public enum SensDeplacement {
-    HAUT(0,-1),
-    BAS(0, 1),
+    HAUT(0,1),
+    BAS(0,-1),
     GAUCHE(-1, 0),
     DROITE(1, 0),
     FIXE(0,0);

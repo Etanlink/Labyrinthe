@@ -19,13 +19,15 @@ public class Plateau {
     public static final int J_ARRIVEE = 1;
 
     /** TODO. */
-    private final Case[][]    tab;
+    private final Case[][] tab;
     /** TODO. */
-    private final int dimension;
+    public final int dimension;
     /** TODO. */
     private final Coordonnees depart;
     /** TODO. */
     private final Coordonnees arrivee;
+    
+    private Coordonnees joueur;
 
     public Coordonnees depart() {
         return this.depart;
@@ -45,10 +47,17 @@ public class Plateau {
         tab[0][1] = new CaseMur();
         tab[1][0] = new CaseSol();
         tab[1][1] = new CaseSol();
-        tab[I_DEPART][J_DEPART] = new CaseJoueur();
-
         depart = new Coordonnees(I_DEPART, J_DEPART);
         arrivee = new Coordonnees(I_ARRIVEE, J_ARRIVEE);
+        this.joueur = depart;
+        this.rafraichirPlateau(new Coordonnees(0,0));
+
+    }
+    
+    public void rafraichirPlateau(Coordonnees nouvellesCoordonnees) {
+    	this.tab[joueur.i][joueur.j]= new CaseSol();
+    	this.joueur=new Coordonnees(nouvellesCoordonnees.i+this.joueur.i,nouvellesCoordonnees.j+this.joueur.j);
+    	this.tab[joueur.i][joueur.j]= new CaseJoueur();
     }
 
     public void afficher() {
@@ -69,4 +78,12 @@ public class Plateau {
         str.append("==============");
         return str.toString();
     }
+    
+    public Case[][] recupererPlateau() {
+    	return this.tab;
+    }
+
+	public Coordonnees posJoueur() {
+		return this.joueur;
+	}
 }

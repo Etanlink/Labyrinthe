@@ -9,11 +9,11 @@ import java.util.Scanner;
  */
 public class Jeu {
     /** TODO. */
-	private static final int DEFAULT_SIZE = 2;
+	public static final int DEFAULT_SIZE = 2;
     /** TODO. */
-    private final Plateau plateau;
+    public final Plateau plateau;
     /** TODO. */
-    private final Coordonnees joueur;
+    public final Coordonnees joueur;
     
     public SensDeplacement[] deplacement;
     
@@ -32,17 +32,18 @@ public class Jeu {
 
     /** TODO. */
     public void jouer() {
-    	while (true /* joueur != arrivee */) {
-    		/* Afficher le plateau. */
-    		plateau.afficher();
+		this.plateau.afficher();
+    	while ((this.plateau.arrivee().i!=this.plateau.posJoueur().i)||(this.plateau.arrivee().j!=this.plateau.posJoueur().j)) {
     		/* Demander le mouvement. */
-    		this.testerMouvement(demanderMouvement());
     		/* Appliquer le mouvement. */
+    		this.appliquerMouvement(demanderMouvement());
+    		/* Afficher Plateau. */
+    		this.plateau.afficher();
     	}
+    	System.out.println("Bravo");
 	}
 
-	private void testerMouvement(SensDeplacement deplacement2) {
-		// TODO Auto-generated method stub
-		//if SensDeplacement = HAUT
+	private void appliquerMouvement(SensDeplacement deplacement2) {
+		this.plateau.rafraichirPlateau(new Coordonnees(deplacement2.x(),deplacement2.y()));		
 	}
 }

@@ -6,10 +6,10 @@ public class Mouvement {
 	
 	static {
 		conversion = new HashMap<String, SensDeplacement>();
-		conversion.put("z", SensDeplacement.HAUT);
-		conversion.put("s", SensDeplacement.BAS);
-		conversion.put("q", SensDeplacement.GAUCHE);
-		conversion.put("d", SensDeplacement.DROITE);
+		conversion.put("d", SensDeplacement.HAUT);
+		conversion.put("q", SensDeplacement.BAS);
+		conversion.put("z", SensDeplacement.GAUCHE);
+		conversion.put("s", SensDeplacement.DROITE);
 		conversion.put("", SensDeplacement.FIXE);
 	}
 	
