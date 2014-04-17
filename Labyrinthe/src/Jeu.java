@@ -44,7 +44,10 @@ public class Jeu {
 	}
 
 	private void appliquerMouvement(SensDeplacement deplacement2) {
-		this.plateau.rafraichirPlateau(new Coordonnees(deplacement2.x(),deplacement2.y()));		
+		Coordonnees coordonneeCiblee = new Coordonnees(deplacement2.x()+this.plateau.posJoueur().i,deplacement2.y()+this.plateau.posJoueur().j);
+		Case caseCiblee = this.plateau.recupererCase(coordonneeCiblee);
+		if(!(caseCiblee instanceof CaseMur)) this.plateau.rafraichirPlateau(coordonneeCiblee);	
+		else System.out.println("non");
 	}
 	
 	public static void main(String[] args) {

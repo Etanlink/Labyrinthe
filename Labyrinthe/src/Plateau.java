@@ -54,9 +54,13 @@ public class Plateau {
 
     }
     
+    public Case recupererCase(Coordonnees coord) {
+    	return this.tab[coord.i][coord.j];
+    }
+    
     public void rafraichirPlateau(Coordonnees nouvellesCoordonnees) {
     	this.tab[joueur.i][joueur.j]= new CaseSol();
-    	this.joueur=new Coordonnees(nouvellesCoordonnees.i+this.joueur.i,nouvellesCoordonnees.j+this.joueur.j);
+    	this.joueur=nouvellesCoordonnees;
     	this.tab[joueur.i][joueur.j]= new CaseJoueur();
     }
 
