@@ -43,6 +43,6 @@ public class Jeu {
 
 	private void testerMouvement(SensDeplacement deplacement2) {
 		// TODO Auto-generated method stub
-		if SensDeplacement = HAUT
+		//if SensDeplacement = HAUT
 	}
 }

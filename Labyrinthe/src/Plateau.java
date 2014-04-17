@@ -1,3 +1,5 @@
+
+
 /* TODO Package. */
 
 /**
@@ -26,7 +28,11 @@ public class Plateau {
     private final Coordonnees arrivee;
 
     public Coordonnees depart() {
-        return depart;
+        return this.depart;
+    }
+    
+    public Coordonnees arrivee() {
+        return this.arrivee;
     }
 
     public Plateau(int dimension) {
@@ -46,15 +52,21 @@ public class Plateau {
     }
 
     public void afficher() {
-        /* TODO À adapter à la taille du labytinthe. */
-        System.out.println("==============");
+    	System.out.println(this.toString());
+        
+    }
+    
+    public String toString() {
+    	StringBuilder str = new StringBuilder(10000);
+    	str.append("==============\n");
         for (int i = 0; i < this.dimension; i++) {
             for (int j = 0; j < this.dimension; j++) {
-                System.out.print(tab[i][j].afficher());
+                str.append(tab[i][j].afficher());
             }
-            System.out.print("\n");
+            str.append("\n");
         }
         /* TODO À adapter à la taille du labytinthe. */
-        System.out.println("==============");
+        str.append("==============");
+        return str.toString();
     }
 }
