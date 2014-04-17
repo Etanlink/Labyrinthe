@@ -1,3 +1,5 @@
+import java.util.Random;
+
 
 
 /* TODO Package. */
@@ -43,12 +45,17 @@ public class Plateau {
 
         /* TODO À extraire dans une méthode interne. */
         /* Initialiser depart et arrivee */
-        tab[0][0] = new CaseSol();
-        tab[0][1] = new CaseMur();
-        tab[1][0] = new CaseSol();
-        tab[1][1] = new CaseSol();
+        for(int x=0; x<dimension ; x++)
+        	for(int y=0 ; y<dimension; y++) {
+        		Random nombreRandom = new Random();
+        		if(nombreRandom.nextBoolean())
+        				this.tab[x][y] = new CaseSol();
+        		else
+        				this.tab[x][y] = new CaseMur();
+        	}
         depart = new Coordonnees(I_DEPART, J_DEPART);
-        arrivee = new Coordonnees(I_ARRIVEE, J_ARRIVEE);
+        arrivee = new Coordonnees(dimension-1, dimension-1);
+        this.tab[arrivee.i][arrivee.j]=new CaseSol();
         this.joueur = depart;
         this.rafraichirPlateau(new Coordonnees(0,0));
 
