@@ -46,4 +46,10 @@ public class Jeu {
 	private void appliquerMouvement(SensDeplacement deplacement2) {
 		this.plateau.rafraichirPlateau(new Coordonnees(deplacement2.x(),deplacement2.y()));		
 	}
+	
+	public static void main(String[] args) {
+        Jeu j = new Jeu(); // Initialisation de la partie
+        j.jouer(); // Premier tour de jeu
+    }
 }
+
