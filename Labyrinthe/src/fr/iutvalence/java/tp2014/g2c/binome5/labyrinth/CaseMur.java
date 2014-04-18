@@ -1,3 +1,4 @@
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
 /* TODO Package. */
 
 /**
@@ -6,10 +7,10 @@
  * @author TODO
  * @version TODO
  */
-public class CaseSol implements Case {
+public class CaseMur implements Case {
 	@Override
 	public String afficher() {
-		return " ";
+		return "#";
 	}
 	
     @Override
