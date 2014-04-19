@@ -72,9 +72,9 @@ public class Jeu {
 		if(((coordonneeCiblee.i<0)||(coordonneeCiblee.j<0))||((coordonneeCiblee.i>=this.plateau.dimension)||(coordonneeCiblee.j>=this.plateau.dimension)))
 			throw new CaseNulleException();
 		Case caseCiblee = this.plateau.recupererCase(coordonneeCiblee);
-		//if(!(caseCiblee instanceof CaseMur)) 
+		if(!(caseCiblee instanceof CaseMur)) 
 		this.plateau.rafraichirPlateau(coordonneeCiblee);	
-		//else System.out.println("non");
+		else System.out.println("non");
 	}	
 }
 
