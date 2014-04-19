@@ -1,16 +1,13 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
-/* TODO Package. */
-
 /**
- * TODO.
- *
- * @author TODO
- * @version TODO
- */
+*
+* OLIVIER Etienne - BERTRAND Hugo
+* version 2.0
+*/
 public class Coordonnees {
-    /** TODO .*/
+    /** abscisse */
     public final int i;
-    /** TODO . */
+    /** ordonnées */
     public final int j;
 
     public Coordonnees(int iDepart, int jDepart) {

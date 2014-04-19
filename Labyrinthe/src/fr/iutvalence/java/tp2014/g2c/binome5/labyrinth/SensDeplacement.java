@@ -1,5 +1,10 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
 
+/**
+*
+* OLIVIER Etienne - BERTRAND Hugo
+* version 2.0
+*/
 public enum SensDeplacement {
     HAUT(0,1),
     BAS(0,-1),
@@ -11,6 +16,7 @@ public enum SensDeplacement {
     
     private final int deltaY;
     
+    /** donne au SensDeplacement les coordonnées correspondant au mouvement*/
     SensDeplacement(int x, int y) {
     	deltaX = x;
     	deltaY = y;

@@ -1,35 +1,25 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
 import java.util.Random;
 
-
-
-/* TODO Package. */
-
 /**
- * TODO.
- *
- * @author /*BERTRAND Hugo et OLIVIER Etienne - TP2C *
- * @version TODO
- */
+*
+* OLIVIER Etienne - BERTRAND Hugo
+* version 2.0
+*/
 public class Plateau {
-	/** TODO. */
+	/** abscisse du point de départ */
     public static final int I_DEPART = 0;
-    /** TODO. */
+    /** coordonnées du point de départ */
     public static final int J_DEPART  = 0;
-    /** TODO. */
-    public static final int I_ARRIVEE = 1;
-    /** TODO. */
-    public static final int J_ARRIVEE = 1;
-
-    /** TODO. */
+    /** tableau de cases */
     private final Case[][] tab;
-    /** TODO. */
-    public int dimension;
-    /** TODO. */
+    /** dimension de tab */
+    public static int dimension;
+    /** coordonnées du point de départ */
     private final Coordonnees depart;
-    /** TODO. */
+    /** coordonnéesdu point d'arrivée */
     private final Coordonnees arrivee;
-    
+    /** coordonnées du joueur*/
     private Coordonnees joueur;
 
     public Coordonnees depart() {
@@ -39,12 +29,12 @@ public class Plateau {
     public Coordonnees arrivee() {
         return this.arrivee;
     }
-
+    /** 
+     * 1.1. 
+     * crée un plateau de dimension donnée en paramètre*/
     public Plateau(int dimension) {
         this.dimension = dimension;
         this.tab = new Case[dimension][dimension];
-
-        /* TODO Ã€ extraire dans une mÃ©thode interne. */
         /* Initialiser depart et arrivee */
         for(int x=0; x<dimension ; x++)
         	for(int y=0 ; y<dimension; y++) {
@@ -61,11 +51,12 @@ public class Plateau {
         this.rafraichirPlateau(new Coordonnees(0,0));
 
     }
-    
+    /** récupère la case indiqués par les coordonnées d'entrée */ 
     public Case recupererCase(Coordonnees coord) {
     	return this.tab[coord.i][coord.j];
     }
     
+    /** applique le mouvement du joueur sur le plateau*/
     public void rafraichirPlateau(Coordonnees nouvellesCoordonnees) {
     	this.tab[joueur.i][joueur.j]= new CaseSol();
     	this.joueur=nouvellesCoordonnees;
@@ -77,6 +68,7 @@ public class Plateau {
         
     }
     
+    /** concataine l'affichage du plateau */
     public String toString() {
     	StringBuilder str = new StringBuilder(10000);
     	str.append("==============\n");
@@ -86,16 +78,19 @@ public class Plateau {
             }
             str.append("\n");
         }
-        /* TODO Ã€ adapter Ã  la taille du labytinthe. */
+        /* TODO adapter la taille du labyrinthe. */
         str.append("==============");
         return str.toString();
     }
     
+    /** récupère le tab dans un tableau */
     public Case[][] recupererPlateau() {
     	return this.tab;
     }
-
+    
+    /** retourne les coordonnées actuelles du joueur */
 	public Coordonnees posJoueur() {
 		return this.joueur;
 	}
+	
 }

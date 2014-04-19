@@ -1,12 +1,9 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
-/* TODO Package. */
-
 /**
- * TODO.
- *
- * @author TODO
- * @version TODO
- */
+*
+* OLIVIER Etienne - BERTRAND Hugo
+* version 2.0
+*/
 public class CaseJoueur implements Case {
     @Override
     public String afficher() {
