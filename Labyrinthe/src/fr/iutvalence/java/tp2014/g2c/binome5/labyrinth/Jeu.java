@@ -33,19 +33,24 @@ public class Jeu {
 
     /** TODO. */
     public void jouer() {
-		this.plateau.afficher();
-    	while ((this.plateau.arrivee().i!=this.plateau.posJoueur().i)||(this.plateau.arrivee().j!=this.plateau.posJoueur().j)) {
-    		/* Demander le mouvement. */
-    		/* Appliquer le mouvement. */
-    		try {
-				this.appliquerMouvement(demanderMouvement());
-			} catch (CaseNulleException e) {
-		    	System.out.println("Attention tu sors");
-			}
-    		/* Afficher Plateau. */
+    	while(true) {
     		this.plateau.afficher();
+    		while ((this.plateau.arrivee().i!=this.plateau.posJoueur().i)||(this.plateau.arrivee().j!=this.plateau.posJoueur().j)) {
+    			/* Demander le mouvement. */
+    			/* Appliquer le mouvement. */
+    			try {
+    					this.appliquerMouvement(demanderMouvement());
+    				} 
+    			catch (CaseNulleException e)
+    				{
+    					System.out.println("Attention tu sors");
+    				}
+    			/* Afficher Plateau. */
+    			this.plateau.afficher();
+    		}
+    		System.out.println("Bravo/n Essaye ça maintenant");
+    		this.plateau.dimension=this.plateau.dimension+5;
     	}
-    	System.out.println("Bravo");
 	}
 
 	private void appliquerMouvement(SensDeplacement deplacement2) throws CaseNulleException {

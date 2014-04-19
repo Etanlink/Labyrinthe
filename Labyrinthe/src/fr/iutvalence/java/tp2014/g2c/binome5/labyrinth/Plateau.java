@@ -24,7 +24,7 @@ public class Plateau {
     /** TODO. */
     private final Case[][] tab;
     /** TODO. */
-    public final int dimension;
+    public int dimension;
     /** TODO. */
     private final Coordonnees depart;
     /** TODO. */
