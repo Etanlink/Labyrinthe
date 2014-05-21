@@ -1,16 +1,19 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
 import java.awt.GridLayout;
-import java.awt.event.MouseListener;
 
-public class AffichagePlateau extends JFrame implements MouseListener
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class AffichagePlateau extends JPanel
 {	
 /**
  * Méthode générant une grille de JButton de la dimension du plateau
  */
-	public void Grille(){
-		this.setLayout(new GridLayout(Plateau.dimension,Plateau.dimension));
-		for(int x=0; x<Plateau.dimension ; x++)
-        	for(int y=0 ; y<Plateau.dimension; y++) {
+	public AffichagePlateau(int taille){
+		super();
+		this.setLayout(new GridLayout(taille,taille));
+		for(int x=0; x<taille ; x++)
+        	for(int y=0 ; y<taille; y++) {
         		add(new JButton(""));
         	}
 		/*

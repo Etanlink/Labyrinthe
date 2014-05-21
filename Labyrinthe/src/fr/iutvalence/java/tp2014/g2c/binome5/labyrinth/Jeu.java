@@ -56,7 +56,7 @@ public class Jeu {
 	 * 	Initialise la dimension à la valeur par défaut, soit 10
 	 */
 	public void initialiserDimension(){
-		plateau.dimension=DEFAULT_SIZE;
+		plateau.dimension=Application.DEFAULT_SIZE;
 	}
 	
 	/** 3
