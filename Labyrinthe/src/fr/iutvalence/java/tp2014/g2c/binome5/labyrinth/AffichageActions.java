@@ -5,8 +5,12 @@ import javax.swing.*;
 
 public class AffichageActions extends JFrame 
 {
+	/**
+	 * Méthode chargé de l'affichage des différents boutons d'actions
+	 * placés sur la droite de la fenètreé
+	 */
 	public void Actions(){
-		this.setLayout(new BorderLayout();
+		this.setLayout(new BorderLayout());
 	}
 	
 }
