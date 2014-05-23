@@ -11,22 +11,18 @@ public class AffichageActions extends JSplitPane
 	 * placés sur la droite de la fenètreé
 	 */
 	
-	private JPanel options = new JPanel();
-	private JPanel deplacements = new JPanel();
+	private Options options = new Options();
+	private Deplacements deplacements = new Deplacements();
 	
 	public AffichageActions(){
 		super();
-		this.setOrientation(VERTICAL_SPLIT);
-		this.setLayout(new Layout());
-		JPanel options = new JPanel();
-		JPanel deplacements = new JPanel();
-
-		this.add(options);
-		deplacements.setLayout(new GridLayout(2,2));
+		this.setOrientation(JSplitPane.VERTICAL_SPLIT);
+		this.setLayout(new GridLayout(2,2));
 		add(new JButton("up"));
 		add(new JButton("down"));
 		add(new JButton("left"));
 		add(new JButton("right"));
+		this.add(options);
 		this.add(deplacements);
 	}
 	
