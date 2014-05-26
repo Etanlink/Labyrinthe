@@ -71,7 +71,6 @@ public class Plateau {
     /** concataine l'affichage du plateau */
     public String toString() {
     	StringBuilder str = new StringBuilder(10000);
-    	str.append("==============\n");
         for (int i = 0; i < this.dimension; i++) {
             for (int j = 0; j < this.dimension; j++) {
                 str.append(tab[i][j].afficher());
@@ -79,7 +78,6 @@ public class Plateau {
             str.append("\n");
         }
         /* TODO adapter la taille du labyrinthe. */
-        str.append("==============");
         return str.toString();
     }
     

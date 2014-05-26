@@ -11,10 +11,12 @@ public class AffichagePlateau extends JPanel
  */
 	public AffichagePlateau(int taille){
 		super();
+		Plateau grid = new Plateau(taille);
+		Case[][] plt = grid.recupererPlateau();
 		this.setLayout(new GridLayout(taille,taille));
 		for(int x=0; x<taille ; x++)
         	for(int y=0 ; y<taille; y++) {
-        		add(new JButton(""));
+        		add(new JButton(plt[x][y].toString()) );
         	}
 		/*
 		* A voir pour améliorer:
