@@ -48,7 +48,7 @@ public class Jeu {
     			/* Afficher Plateau. */
     			this.plateau.afficher();
     		}
-    		System.out.println("Bravo/n Essaye ça maintenant");
+    		System.out.println("Bravo, Essaye ça maintenant");
     	
 	}
    
@@ -67,7 +67,7 @@ public class Jeu {
 	}
 	/** applique aux coordonnées du joueur les coordonnées du déplacements saisi
 	 * 	teste la sortie de tablau et le déplacement sur case mur*/
-	private void appliquerMouvement(SensDeplacement deplacement2) throws CaseNulleException {
+	public void appliquerMouvement(SensDeplacement deplacement2) throws CaseNulleException {
 		Coordonnees coordonneeCiblee = new Coordonnees(deplacement2.x()+this.plateau.posJoueur().i,deplacement2.y()+this.plateau.posJoueur().j);
 		if(((coordonneeCiblee.i<0)||(coordonneeCiblee.j<0))||((coordonneeCiblee.i>=this.plateau.dimension)||(coordonneeCiblee.j>=this.plateau.dimension)))
 			throw new CaseNulleException();

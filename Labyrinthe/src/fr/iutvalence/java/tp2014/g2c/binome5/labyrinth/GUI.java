@@ -19,7 +19,7 @@ public class GUI extends JFrame implements Runnable
 	@Override
 	public void run(){
 		this.setTitle("Labyrinthe");
-		this.setSize(640, 480);
+		this.setSize(800, 540);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//On crée un split affichant plateau et actions
 		JSplitPane pan1 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
