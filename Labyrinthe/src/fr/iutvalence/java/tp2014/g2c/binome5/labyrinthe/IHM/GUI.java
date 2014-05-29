@@ -1,4 +1,4 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.IHM;
 //Import des classes graphiques
 import java.awt.BorderLayout;
 
@@ -6,6 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
+
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Deplacements;
 
 //Classe s'occupant de lancer l'affichage
 public class GUI extends JFrame implements Runnable

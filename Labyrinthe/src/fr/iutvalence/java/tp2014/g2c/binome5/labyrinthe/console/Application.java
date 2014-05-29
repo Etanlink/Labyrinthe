@@ -1,6 +1,10 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.console;
 
 import javax.swing.SwingUtilities;
+
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.IHM.GUI;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Jeu;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Plateau;
 
 /**
  * 

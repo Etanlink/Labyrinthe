@@ -1,8 +1,11 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.IHM;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Plateau;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase.Case;
 
 public class AffichagePlateau extends JPanel
 {	
@@ -16,7 +19,7 @@ public class AffichagePlateau extends JPanel
 		this.setLayout(new GridLayout(taille,taille));
 		for(int x=0; x<taille ; x++)
         	for(int y=0 ; y<taille; y++) {
-        		add(new JButton(plt[x][y].toString()) );
+        		add(new JButton(plt[x][y].toString()));
         	}
 		/*
 		* A voir pour améliorer:

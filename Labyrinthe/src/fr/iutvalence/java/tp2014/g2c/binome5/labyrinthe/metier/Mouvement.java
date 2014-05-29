@@ -1,4 +1,4 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier;
 import java.util.HashMap;
 import java.util.Map;
 /**

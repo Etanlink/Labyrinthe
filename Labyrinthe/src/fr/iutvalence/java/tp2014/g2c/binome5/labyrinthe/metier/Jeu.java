@@ -1,5 +1,10 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier;
 import java.util.Scanner;
+
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.console.Application;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase.Case;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase.CaseMur;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase.CaseNulleException;
 
 /**
 *

@@ -1,7 +1,11 @@
-package fr.iutvalence.java.tp2014.g2c.binome5.labyrinth;
+package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.IHM;
 import java.awt.*;
 
 import javax.swing.*;
+
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Deplacements;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.Jeu;
+import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.metier.SensDeplacement;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
