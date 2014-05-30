@@ -14,10 +14,10 @@ import java.awt.event.ActionListener;
 public class AffichageActions extends JSplitPane implements ActionListener
 {
 	//Attributs déclarant les boutons d'action
-	public JButton BoutonHaut = new JButton("HAUT");
-	public JButton BoutonGauche = new JButton("GAUCHE");
-	public JButton BoutonBas = new JButton("BAS");
-	public JButton BoutonDroite = new JButton("DROITE");
+	public static JButton BoutonHaut = new JButton("HAUT");
+	public static JButton BoutonGauche = new JButton("GAUCHE");
+	public static JButton BoutonBas = new JButton("BAS");
+	public static JButton BoutonDroite = new JButton("DROITE");
 	private Options options = new Options();
 	private Deplacements deplacements = new Deplacements();
 	/**
@@ -45,14 +45,11 @@ public class AffichageActions extends JSplitPane implements ActionListener
 		this.add(deplacements);
 	}
 		
-		public void actionPerformed(ActionEvent arg){
-			 if(arg.getSource() == BoutonHaut)
-				 Jeu.appliquerMouvement(SensDeplacement.HAUT);
-			 if(arg.getSource() == BoutonHaut)
-				 Jeu.appliquerMouvement(SensDeplacement.GAUCHE, deplacement2);
-			 if(arg.getSource() == BoutonBas)
-				 Jeu.appliquerMouvement(SensDeplacement.BAS, deplacement2);
-			 if(arg.getSource() == BoutonDroite)
-				 Jeu.appliquerMouvement(SensDeplacement.DROITE, deplacmeent2);		 
+		public void actionPerformed(ActionEvent event) {
+			JButton selectedItem = (JButton) event.getSource();
+			if(selectedItem == AffichageActions.BoutonHaut) Jeu.appliquerMouvement(SensDeplacement.HAUT);
+			if(selectedItem == AffichageActions.BoutonGauche) Jeu.appliquerMouvement(SensDeplacement.GAUCHE);
+			if(selectedItem == AffichageActions.BoutonBas) Jeu.appliquerMouvement(SensDeplacement.BAS);
+			if(selectedItem == AffichageActions.BoutonDroite) Jeu.appliquerMouvement(SensDeplacement.DROITE);
 		}
 }
