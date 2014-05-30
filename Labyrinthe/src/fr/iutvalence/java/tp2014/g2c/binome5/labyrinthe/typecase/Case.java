@@ -1,4 +1,7 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase;
+
+import javax.swing.JButton;
+
 /**
 *
 * OLIVIER Etienne - BERTRAND Hugo
@@ -6,4 +9,5 @@ package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase;
 */
 public interface Case {
     String afficher();
+    JButton afficherBoutton();
 }
