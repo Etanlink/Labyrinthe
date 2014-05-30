@@ -1,10 +1,8 @@
 package fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase;
 
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.images.*;
 /**
 *
 * OLIVIER Etienne - BERTRAND Hugo
@@ -14,7 +12,7 @@ public class CaseJoueur implements Case {
     
 	public JButton BoutonJoueur;
 	
-	public JButton afficherBoutton(){
+	public JButton afficherBouton(){
     BoutonJoueur = new JButton(new ImageIcon("fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.images/joueur.png"));
     return BoutonJoueur;
 	}

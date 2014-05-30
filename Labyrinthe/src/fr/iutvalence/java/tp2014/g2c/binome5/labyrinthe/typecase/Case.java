@@ -8,6 +8,8 @@ import javax.swing.JButton;
 * version 2.0
 */
 public interface Case {
-    String afficher();
-    JButton afficherBoutton();
+    
+	String afficher();
+    
+    JButton afficherBouton();
 }
