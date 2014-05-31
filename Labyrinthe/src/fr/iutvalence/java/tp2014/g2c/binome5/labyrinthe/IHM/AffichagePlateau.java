@@ -21,11 +21,5 @@ public class AffichagePlateau extends JPanel
         	for(int y=0 ; y<taille; y++) {
         		add(new JButton(plt[x][y].toString()));
         	}
-		/*
-		* A voir pour améliorer:
-		* - faire une première boucle d'instanciation de la grille de JButton
-		* - puis une deuxième boucle où l'on place les "cases murs" 
-		*   avec Mouse Listener pour interagir avec ces boutons particulièrement
-		*/
 	}
 }
