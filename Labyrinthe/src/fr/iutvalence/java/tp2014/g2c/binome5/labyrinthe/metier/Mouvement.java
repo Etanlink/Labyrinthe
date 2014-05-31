@@ -16,6 +16,10 @@ public class Mouvement {
 		conversion.put("z", SensDeplacement.GAUCHE);
 		conversion.put("s", SensDeplacement.DROITE);
 		conversion.put("", SensDeplacement.FIXE);
+		conversion.put("up", SensDeplacement.HAUT);
+		conversion.put("left", SensDeplacement.GAUCHE);
+		conversion.put("down", SensDeplacement.BAS);
+		conversion.put("right", SensDeplacement.DROITE);
 	}
 	
 	/** transforme la saisie clavier en coordonnées, stockées dans SensDeplacement*/
