@@ -14,7 +14,7 @@ import fr.iutvalence.java.tp2014.g2c.binome5.labyrinthe.typecase.CaseNulleExcept
 public class Jeu {
 
     /** variable contenant l'instance du plateau d'un tour de jeu */
-    public final Plateau plateau;
+    public static Plateau plateau;
     /** variable contenant les coordonnées du jeoueur */
     public final Coordonnees joueur;
     /** variable contenant le sens de déplacement du tour en cours*/
@@ -72,13 +72,13 @@ public class Jeu {
 	}
 	/** applique aux coordonnées du joueur les coordonnées du déplacements saisi
 	 * 	teste la sortie de tablau et le déplacement sur case mur*/
-	public void appliquerMouvement(SensDeplacement deplacement2) throws CaseNulleException {
-		Coordonnees coordonneeCiblee = new Coordonnees(deplacement2.x()+this.plateau.posJoueur().i,deplacement2.y()+this.plateau.posJoueur().j);
-		if(((coordonneeCiblee.i<0)||(coordonneeCiblee.j<0))||((coordonneeCiblee.i>=this.plateau.dimension)||(coordonneeCiblee.j>=this.plateau.dimension)))
+	public static void appliquerMouvement(SensDeplacement deplacement2) throws CaseNulleException {
+		Coordonnees coordonneeCiblee = new Coordonnees(deplacement2.x()+Jeu.plateau.posJoueur().i,deplacement2.y()+Jeu.plateau.posJoueur().j);
+		if(((coordonneeCiblee.i<0)||(coordonneeCiblee.j<0))||((coordonneeCiblee.i>=Jeu.plateau.dimension)||(coordonneeCiblee.j>=Jeu.plateau.dimension)))
 			throw new CaseNulleException();
-		Case caseCiblee = this.plateau.recupererCase(coordonneeCiblee);
+		Case caseCiblee = Jeu.plateau.recupererCase(coordonneeCiblee);
 		if(!(caseCiblee instanceof CaseMur)) 
-		this.plateau.rafraichirPlateau(coordonneeCiblee);	
+		Jeu.plateau.rafraichirPlateau(coordonneeCiblee);	
 		else System.out.println("non");
 	}	
 }
